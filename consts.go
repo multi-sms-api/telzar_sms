@@ -6,6 +6,7 @@ const (
 	DevAPIAddress   = `https://www.019sms.co.il:8090/api/test`
 	HTTPContentType = `text/xml; charset=utf-8`
 	HTTPMethod      = "POST"
+	DateFormat      = "01/02/2006 15:04:05"
 )
 
 // Supported types of Unsubscribe
