@@ -10,7 +10,7 @@ type Phone struct {
 
 // DestinationXML represent the XML structure of destination
 type DestinationXML struct {
-	XMLName xml.Name `xml:"destination"`
+	XMLName xml.Name `xml:"destinations"`
 	ClID    []string `xml:"cl_id,omitempty"`
 	Phone   []Phone  `xml:"phone"`
 }

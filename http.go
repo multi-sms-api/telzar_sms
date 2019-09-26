@@ -38,8 +38,6 @@ func (h HTTPHandler) DoHTTP(
 		request, err = http.NewRequest(http.MethodPost, fullAddress, bodyReader)
 	}
 
-	request.Header.Set("Content-Type", XMLMimeType)
-
 	if err != nil {
 		return nil, err
 	}

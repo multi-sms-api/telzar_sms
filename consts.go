@@ -2,9 +2,10 @@ package telzarsms
 
 // Basic Addresses for contacting Telzar
 const (
-	ProdAPIAddress = `https://www.019sms.co.il/api`
-	DevAPIAddress  = `https://www.019sms.co.il:8090/api/test`
-	XMLMimeType    = `text/xml; charset=utf-8`
+	ProdAPIAddress  = `https://www.019sms.co.il/api`
+	DevAPIAddress   = `https://www.019sms.co.il:8090/api/test`
+	HTTPContentType = `text/xml; charset=utf-8`
+	HTTPMethod      = "POST"
 )
 
 // Supported types of Unsubscribe
