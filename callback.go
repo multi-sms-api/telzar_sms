@@ -5,10 +5,12 @@ import (
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/ik5/smshandler"
 )
 
 // Callback execute on getting Push SMS back from Telzar
-func Callback(h HTTPHandler, path string, mux *http.ServeMux,
+func Callback(h smshandler.HTTPHandler, path string, mux *http.ServeMux,
 	onCallback func(http.ResponseWriter, *http.Request, *DLRPush, error)) {
 
 	handleCallback := func(w http.ResponseWriter, r *http.Request) {
