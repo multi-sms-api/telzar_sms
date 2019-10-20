@@ -1,6 +1,9 @@
 package telzarsms
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+	"errors"
+)
 
 // XMLResponse holds information about the given response back from the server
 type XMLResponse struct {
@@ -16,6 +19,11 @@ type XMLResponse struct {
 func (r *XMLResponse) FromXMLResponse(buf []byte) error {
 	err := xml.Unmarshal(buf, r)
 	return err
+}
+
+// FromJSONResponse return an error when called, but implemented due to interface
+func (r *XMLResponse) FromJSONResponse(buf []byte) error {
+	return errors.New("JSON is not supported by XMLResponse")
 }
 
 // ToError converts XMLResponse to SMSError. If everything is ok, it will return
