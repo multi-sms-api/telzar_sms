@@ -1,4 +1,4 @@
-module github.com/ik5/telzar_sms
+module github.com/multi-sms-api/telzar_sms
 
 go 1.13
 
